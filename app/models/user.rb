@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :visits
+  has_many :interests
 
   validates_presence_of :name, :identification
 

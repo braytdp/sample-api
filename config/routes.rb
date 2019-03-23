@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :events
   resources :visits
+  resources :interests
 
   get 'users/identification/:identification', to: 'users#identification'
 end

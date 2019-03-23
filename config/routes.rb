@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :events
   resources :visits
   resources :interests
+  resources :categories
 
   get 'users/identification/:identification', to: 'users#identification'
 end

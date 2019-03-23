@@ -15,12 +15,8 @@ ActiveRecord::Schema.define(version: 2019_03_23_140355) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "companies", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "interests", force: :cascade do |t|
+  create_table "events", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,7 +30,7 @@ ActiveRecord::Schema.define(version: 2019_03_23_140355) do
   end
 
   create_table "visits", force: :cascade do |t|
-    t.integer "company_id"
+    t.integer "event_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
